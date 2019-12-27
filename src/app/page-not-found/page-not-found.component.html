@@ -1,0 +1,25 @@
+<!--https://bootsnipp.com/snippets/featured/simple-404-not-found-page-->
+
+<div class="row mt-md-5 mt-0 pt-5 pb-5" style="background-color:#afafaf;">
+  <div class="col-md-12">
+    <div class="error-template">
+      <h1 i18n>
+        Oops!</h1>
+      <h2>
+        404 Error</h2>
+      <p class="error-details" i18n>
+        Cannot find this Page! <br>
+        Contact Customer center.
+      </p>
+      <div class="error-actions">
+        <a class="btn btn-primary btn-lg mt-3" (click)="this.router.navigate(['/'])" i18n><i class="fa fa-home"></i>
+          Main Menu
+        </a>
+        <a href="https://www.welleastern.cn/chn/cs/cs04.php" class="btn btn-light btn-lg mt-3" target="_blank" i18n>
+          <i class="fa fa-user-circle"></i>
+          Customer Center
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
