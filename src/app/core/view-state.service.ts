@@ -6,46 +6,39 @@ import {Subject} from 'rxjs';
 })
 export class ViewStateService {
 
-  viewStateSubChanged = new Subject<boolean>();
+  kStateChanged = new Subject<boolean>();
+  studyStateChanged = new Subject<boolean>();
 
   // -------------------GLOBAL CONSTANTS----------------------
-  MAIN_MENU_STUDY = 'study';
-  MAIN_MENU_BEST = 'best';
-  MAIN_MENU_MYHOUSE = 'myhouse';
-  MAIN_MENU_TEST = 'test';
-  MAIN_MENU_INFO = 'info';
 
-  STUDY_VOCAB = 'vocabulary';
-  STUDY_STORY = 'storybook';
-  STUDY_GRAMMAR = 'grammar';
-  STUDY_LISTEN = 'listening';
-  STUDY_SPEAK = 'speaking';
-  STUDY_FINAL = 'finaltest';
+  ACTIVITY = 'activity';
+  BEFORE_YOU_STUDY = 'before_you_study';
+  BOARD = 'board';
+  DANCE = 'dance';
+  PHONICS = 'phonics';
+  SING_A_SONG = 'sing_a_song';
+  STORY_TELLING = 'story_telling';
 
-  // MYHOUSE_myroom = 'myhouse';
-  // MYHOUSE_myroom = 'myhouse';
-  // MYHOUSE_myroom = 'myhouse';
-  // MYHOUSE_myroom = 'myhouse';
-
-  private _view_state = this.MAIN_MENU_STUDY;
-  private _view_state_sub = this.STUDY_VOCAB;
+  private _k_state = 1; // 1,2,3
+  private _study_state = this.SING_A_SONG;
 
   constructor() { }
 
-  get view_state(): string {
-    return this._view_state;
+  get k_state(): number {
+    return this._k_state;
   }
 
-  set view_state(value: string) {
-    this._view_state = value;
+  set k_state(value: number) {
+    this._k_state = value;
+    this.kStateChanged.next(true);
   }
 
-  get view_state_sub(): string {
-    return this._view_state_sub;
+  get study_state(): string {
+    return this._study_state;
   }
 
-  set view_state_sub(value: string) {
-    this._view_state_sub = value;
-    this.viewStateSubChanged.next(true);
+  set study_state(value: string) {
+    this._study_state = value;
+    this.studyStateChanged.next(true);
   }
 }

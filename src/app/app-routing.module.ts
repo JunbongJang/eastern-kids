@@ -11,16 +11,16 @@ import {PhonicsComponent} from './study/phonics/phonics.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 export const appRoutes: Routes = [
-  { path: '', redirectTo: '/main/activity', pathMatch: 'full'},
+  { path: '', redirectTo: '/study/activity', pathMatch: 'full'},
   // { path: 'main', component: MainMenuComponent, data: { state: 'main-menu' }},
-  { path: 'main', component: StudyComponent, data: { state: 'main-menu' }, children: [
-      { path: 'activity', component: ActivityComponent, data: { state: 'main-menu-study' } },
-      { path: 'before-you-study', component: BeforeYouStudyComponent, data: { state: 'main-menu-test' } },
-      { path: 'board', component: BoardComponent, data: { state: 'main-menu-info' } },
-      { path: 'dance', component: DanceComponent, data: { state: 'main-menu-best' } },
-      { path: 'sing-a-song', component: SingASongComponent, data: { state: 'main-menu-myhouse' } },
-      { path: 'phonics', component: PhonicsComponent, data: { state: 'main-menu-myhouse' } },
-      { path: 'story-telling', component: StoryTellingComponent, data: { state: 'main-menu-myhouse' } }
+  { path: 'study', component: StudyComponent, data: { state: 'study' }, children: [
+      { path: 'activity', component: ActivityComponent, data: { state: 'activity' } },
+      { path: 'before_you_study', component: BeforeYouStudyComponent, data: { state: 'before_you_study' } },
+      { path: 'board', component: BoardComponent, data: { state: 'board' } },
+      { path: 'dance', component: DanceComponent, data: { state: 'dance' } },
+      { path: 'sing_a_song', component: SingASongComponent, data: { state: 'sing_a_song' } },
+      { path: 'phonics', component: PhonicsComponent, data: { state: 'phonics' } },
+      { path: 'story_telling', component: StoryTellingComponent, data: { state: 'story_telling' } }
     ] },
 
   { path: 'page-not-found', component: PageNotFoundComponent },

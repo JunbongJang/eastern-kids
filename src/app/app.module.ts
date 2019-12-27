@@ -12,10 +12,10 @@ import { BeforeYouStudyComponent } from './study/before-you-study/before-you-stu
 import { BoardComponent } from './study/board/board.component';
 import { DanceComponent } from './study/dance/dance.component';
 import { SingASongComponent } from './study/sing-a-song/sing-a-song.component';
-import { VocabularyComponent } from './study/vocabulary/vocabulary.component';
 import { StoryTellingComponent } from './study/story-telling/story-telling.component';
 import { PhonicsComponent } from './study/phonics/phonics.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SafePipe } from './pipe/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -26,10 +26,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BoardComponent,
     DanceComponent,
     SingASongComponent,
-    VocabularyComponent,
     StoryTellingComponent,
     PhonicsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

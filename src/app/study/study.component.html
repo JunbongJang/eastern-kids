@@ -1,1 +1,52 @@
-<p>study works!</p>
+<div class="container">
+  <div class="row mb-3">
+    <div class="col">
+      <img src="assets/img/cn_welleastern_logo.png"
+           class="logo_img"
+           alt="logo" style="height:115px;">
+    </div>
+    <div class="col">
+      <img src="assets/img/eastern_kids_logo.png"
+           class="logo_img"
+           alt="logo" style="height:180px;">
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
+  <div id="border_container" class="row bg-white pt-2 pb-3 mb-3"
+       style="border-radius: 20px; border-style: solid; border-width: 5px; border-color: #007bff">
+    <div class="col-3">
+      <div class="btn-group" style="width:100%" role="group" aria-label="Level select">
+        <button type="button" class="btn btn-secondary" (click)="kStateChange(1)">K1</button>
+        <button type="button" class="btn btn-secondary" (click)="kStateChange(2)">K2</button>
+        <button type="button" class="btn btn-secondary" (click)="kStateChange(3)">K3</button>
+      </div>
+
+      <div class="d-flex btn-group-vertical justify-content-middle mt-4">
+        <button type="button" class="btn btn-lg btn-primary" (click)="studyStateChange(this.viewStateService.SING_A_SONG)">Sing a song</button>
+        <button type="button" class="btn btn-lg btn-info" (click)="studyStateChange(this.viewStateService.BEFORE_YOU_STUDY)">Before You Study</button>
+        <button type="button" class="btn btn-lg btn-success" (click)="studyStateChange(this.viewStateService.STORY_TELLING)">Story Telling</button>
+        <button type="button" class="btn btn-lg btn-warning" (click)="studyStateChange(this.viewStateService.BOARD)">Board</button>
+        <button type="button" class="btn btn-lg btn-danger" (click)="studyStateChange(this.viewStateService.ACTIVITY)">Activity</button>
+        <button type="button" class="btn btn-lg btn-purple" (click)="studyStateChange(this.viewStateService.PHONICS)">Phonics</button>
+        <button type="button" class="btn btn-lg btn-purple" (click)="studyStateChange(this.viewStateService.DANCE)">Dance</button>
+      </div>
+
+    </div>
+    <div class="col-9">
+      <div class="row">
+        <div class="col" >
+          <h1 id="state_title"></h1>
+        </div>
+      </div>
+
+      <hr class="mb-2 mt-1">
+      <div class="row">
+        <router-outlet></router-outlet>
+      </div>
+
+
+    </div>
+  </div>
+</div>

@@ -77,7 +77,6 @@ export class GeneralUtilityService {
     if (chinese_string === null || chinese_string === '') {
       return '';
     }
-\
     const start_time = new Date().getMilliseconds();
     // console.log('replaceChineseCharacters: ' + chinese_string);
 

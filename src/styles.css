@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.card{
+  cursor:pointer;
+}
+
+@font-face {
+  font-family: bubblegumSans;
+  src: url(assets/fonts/BubblegumSans-Regular.ttf);
+}
+
+body {
+  font-family: bubblegumSans;
+}
